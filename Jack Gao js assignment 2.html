@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        
+        
+            
+        </style>
+        <center>
+        	<h1>
+        		JS assignment2<br>Jack Gao
+        	</h1>
+        </center>
+
+
+    </head>
+ <!-- 
+ 1. Show the current date information when a user visits your website.
+ 2. Create an image, when the mouse moves over the image, the image changes.
+ 3. Create a paragraph, when it's clicked, change the content.
+ 4. Press any key on the web page to see an alert box.
+ 5. Create a function to make three changes at the same time to the paragraph:                                                                                     A. add a background color    B. change the font family to "Arial".  C. make the text in the center of the screen.
+ 6. Create a function to show the conversion result from 20 degrees Fahrenheit to Celsius using a <h1>.
+ 7. Create a function to simulate the calculator, which takes two input and output the sum result (+) on the webpage.
+ 8. Create a function that takes 2 inputs (First Name & Last Name), output "Nice to meet you First Name Last Name".-->
+    <center><body onkeydown="keyboard()">
+       
+
+        <img src="https://i.kym-cdn.com/photos/images/newsfeed/001/857/750/4ab.png" width="500px" height="350" id="img" onmouseover="image()">
+        <br>
+
+        <p id="paragraph1">I am going to change.</p>
+        <button onclick="change()">click to change the works</button><br><br>
+
+        <p>Tap any button on your keyboard</p>
+
+        <p id="paragraph2" style="text-align: left; font-size: 25px;">This is a paragraph that's gonna change as long as you click the button down below</p>
+        <button onclick="parachange()">This is a button that can do some changes</button>
+
+        <p id="temp">20 degrees Fahrenhelt</p>
+        <button onclick="temp_change()">Click to convert Unit F to C</button><br><br>
+
+        <button onclick="calc()">A adding calculator</button><br><br>
+
+        <button onclick="greet()">Enter your name in tooltip</button>
+
+        <script type="text/javascript" src="JS2.js"></script>
+    </body></center>
+</html>
