@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Jack's assignment</title>
+</head>
+<body>
+ <center>
+ <button onclick="change1()">Greet(gender)</button>
+ <button onclick="change2()">Greet(time)</button>
+ <button onclick="change3()">Math</button>
+ <button onclick="change4()">Greet(weekday)</button>
+ <button onclick="change5()">Password</button>
+</center>
+<script>
+  function change1(){
+ var a = prompt('What is your name?');
+ var b = prompt('What is your gender("1" is male,"2" is female)');
+ if(b == 1){
+  alert('Hi, Mr. '+a);
+ }
+ else if(b == 2){
+  alert('Hi, Miss. '+a);
+ }
+}
+
+function change2(){
+     var c = new Date().getHours();
+     if(c < 12){
+      alert('Good morning!');
+     }
+     else if(c > 12 || c < 18){
+      alert('Good afternoon!');
+     }
+     else if(c > 18 || c < 24){
+      alert('Good evening!');
+     }
+}
+function change3(){
+ var user = parseFloat(prompt('Please enter a number between 0 and 10'));
+ var computer = Math.floor(Math.random()*11);
+ if(user > computer){
+  alert('The computer chooses '+computer+', you win!');
+ }
+ else if(user < computer){
+  alert('The computer chooses '+computer+', the computer wins.')
+ }
+ else{alert('Tie game');}
+}
+
+function change4(){
+ var d = new Date().getDay();
+ switch(d){
+  case 0:alert('Today is Sunday.');
+      break;
+        case 1:alert('Today is Monday.');
+      break;
+  case 2:alert('Today is Tuesday.');
+      break;
+        case 3:alert('Today is Wednesday.');
+      break;
+        case 4:alert('Today is Thursday.');
+      break;
+        case 5:alert('Today is Friday.');
+      break;
+  case 6:alert('Today is Saturday.');
+      break;
+ }
+}
+function change5(){
+ var e = prompt('Set your password.');
+ var e = e.toString();
+    if(e.length > 10){
+        alert('No more than 10 characters.');
+    }
+    else if(e.indexOf('!')!=-1){
+        alert('There will be no "!","?","$", and "#" in the password.');
+    }
+    else if(e.indexOf('$')!=-1){
+       alert('There will be no "!","?","$", and "#" in the password.')
+    } 
+    else if(e.indexOf('#')!=-1){
+        alert('There will be no "!","?","$", and "#" in the password.')
+    }
+    else if(e.indexOf('?')!=-1){
+        alert('There will be no "!","?","$", and "#" in the password.')
+    }
+    else if(e.indexOf('*')==0){
+        alert('The initial character cannot be "*".')
+    }
+    else{
+        alert('You have created your password.')
+    }
+}
+</script>
+</body>
+</html>
